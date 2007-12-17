@@ -15,7 +15,6 @@ Source:         http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.
 Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Proc::Daemon provides the capability for a Perl program to run
