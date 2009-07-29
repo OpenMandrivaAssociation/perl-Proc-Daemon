@@ -1,28 +1,28 @@
-%define module  Proc-Daemon
-%define name    perl-%{module}
-%define version 0.03
-%define release %mkrel 5
+%define upstream_name    Proc-Daemon
+%define upstream_version 0.03
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-License:        Artistic
-Summary:        Run a perl program as a daemon process
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Run a perl program as a daemon process
+License:    Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Proc/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Proc::Daemon provides the capability for a Perl program to run
 as a Unix daemon process.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +43,3 @@ rm -rf %{buildroot}
 %doc README
 %{_mandir}/man3/*
 %{perl_vendorlib}/Proc
-
