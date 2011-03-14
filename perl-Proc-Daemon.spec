@@ -1,9 +1,9 @@
 %define upstream_name    Proc-Daemon
-%define upstream_version 0.07
+%define upstream_version 0.08
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Run a perl program as a daemon process
 License:    Artistic
