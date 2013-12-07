@@ -4,7 +4,7 @@
 Summary:	Run a perl program as a daemon process
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	8
+Release:	9
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
