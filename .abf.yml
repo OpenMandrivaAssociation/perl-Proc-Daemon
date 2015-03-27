@@ -1,2 +1,4 @@
+removed_sources:
+  Proc-Daemon-0.14.tar.bz2: 2fefd4531121ec468893c1989a4fd39276b54b91
 sources:
-  "Proc-Daemon-0.14.tar.bz2": 2fefd4531121ec468893c1989a4fd39276b54b91
+  Proc-Daemon-0.18.tar.gz: 107cedee16b5994076e94826df85801f1ee26168
