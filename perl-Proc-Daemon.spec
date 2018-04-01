@@ -1,14 +1,14 @@
 %define modname	Proc-Daemon
-%define modver	0.14
+%define modver	0.23
 
 Summary:	Run a perl program as a daemon process
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	14
+Release:	1
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Proc/%{modname}-%{modver}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Proc/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -30,7 +30,5 @@ make test
 %makeinstall_std
 
 %files
-%doc README
 %{perl_vendorlib}/Proc
 %{_mandir}/man3/*
-
