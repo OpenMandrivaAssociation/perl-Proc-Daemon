@@ -1,14 +1,13 @@
 %define modname	Proc-Daemon
-%define modver	0.23
 
 Summary:	Run a perl program as a daemon process
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	0.23
+Release:	1
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Proc/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Proc/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -17,7 +16,7 @@ Proc::Daemon provides the capability for a Perl program to run
 as a Unix daemon process.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
