@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Proc/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 
 %description
