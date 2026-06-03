@@ -3,7 +3,7 @@
 Summary:	Run a perl program as a daemon process
 Name:		perl-%{modname}
 Version:	0.23
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
